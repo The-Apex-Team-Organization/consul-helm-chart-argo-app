@@ -17,7 +17,7 @@ metadata:
   namespace: consul
 spec:
   destination:
-    name: backend  # must match the kubernetes service name of backend
+    name: backend # must match the kubernetes service name of backend
   sources:
     - name: frontend # -//-
       action: allow

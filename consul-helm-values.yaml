@@ -19,7 +19,7 @@ connectInject:
 ui:
   enabled: true
   service:
-    type: 'LoadBalancer'
+    type: "LoadBalancer"
 
 ingressGateways:
   enabled: true
