@@ -26,13 +26,13 @@ spec:
 
     # Use values from demo repository for Helm chart
     - repoURL: "https://github.com/Red-I3ull/consul.git"
-      targetRevision: BULL-44-Create-consul-repo-and-add-application-for-argo-cd-and-deploy-consul
+      targetRevision: HEAD
       ref: values
 
     # Use Consul CRDs to configure proxy-defaults and mesh
     - repoURL: "https://github.com/Red-I3ull/consul.git"
       path: consul-config
-      targetRevision: BULL-44-Create-consul-repo-and-add-application-for-argo-cd-and-deploy-consul
+      targetRevision: HEAD
 
   # Deploy to the consul namespace in same cluster
   destination:
