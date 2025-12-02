@@ -1,0 +1,34 @@
+global:
+  enabled: true
+  name: consul
+  datacenter: dc1
+  tls:
+    enabled: true
+  acls:
+    manageSystemACLs: true
+
+server:
+  enabled: true
+  replicas: 3
+  storageClass: gp2
+
+connectInject:
+  enabled: true
+  default: false
+
+ui:
+  enabled: true
+  service:
+    type: 'LoadBalancer'
+
+ingressGateways:
+  enabled: true
+  defaults:
+    replicas: 1
+    service:
+      type: ClusterIP
+  gateways:
+    - name: ingress-gateway
+      serviceAccount:
+        create: true
+        name: ""
