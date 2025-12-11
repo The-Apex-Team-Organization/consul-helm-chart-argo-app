@@ -1,0 +1,23 @@
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: frontend-access
+  namespace: consul
+spec:
+  destination:
+    name: frontend
+  sources:
+    - name: ingress-gateway
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: frontend-to-backend
+  namespace: consul
+spec:
+  destination:
+    name: backend # must match the kubernetes service name of backend
+  sources:
+    - name: frontend # -//-
+      action: allow
