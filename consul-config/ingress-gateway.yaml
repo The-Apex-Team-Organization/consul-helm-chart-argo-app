@@ -9,4 +9,5 @@ spec:
       protocol: http
       services:
         - name: frontend
+          namespace: illuminati
           hosts: ["*"]
