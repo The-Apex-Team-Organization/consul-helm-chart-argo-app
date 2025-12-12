@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: consul-ingress
+  name: ingress-gateway
   namespace: consul
   annotations:
     kubernetes.io/ingress.class: alb
@@ -22,6 +22,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: consul-ingress-gateway
+                name: ingress-gateway
                 port:
                   number: 8080
