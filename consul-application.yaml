@@ -26,13 +26,13 @@ spec:
 
     # Use values from demo repository for Helm chart
     - repoURL: "https://github.com/The-Apex-Team-Organization/consul-helm-chart-argo-app.git"
-      targetRevision: TAT-32-Create-helm-chart-and-argo-application-for-consul
+      targetRevision: HEAD
       ref: values
 
     # Use Consul CRDs to configure proxy-defaults and mesh
     - repoURL: "https://github.com/The-Apex-Team-Organization/consul-helm-chart-argo-app.git"
       path: consul-config
-      targetRevision: TAT-32-Create-helm-chart-and-argo-application-for-consul
+      targetRevision: HEAD
 
   # Deploy to the consul namespace in same cluster
   destination:
