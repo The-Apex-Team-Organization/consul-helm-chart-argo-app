@@ -9,3 +9,4 @@ spec:
       protocol: http
       services:
         - name: frontend
+          hosts: ["*"]
